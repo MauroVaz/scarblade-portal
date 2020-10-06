@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<ui:include src="/resources/components/head_component.xhtml" />
+
+
+</h:head>
+<h:body class="bg-light">
+
+	<ui:include src="/resources/components/top_navegacao_component.xhtml" />
+
+	<main role="main" style="background: gray;">
+
+		<div class="album py-5 bg-light">
+			<div class="container" style="margin-top: 5%;">				
+    				
+    			    				
+    			<div class="row">
+    			
+    			
+    		
+		<div class="col-12">	
+		<p:panel>
+			<h:form>		
+					<br/>
+					<h:message for="@all" showDetail="true" showSummary="true" />
+					<p:messages showDetail="true"/>
+						
+							
+    				<h1 class="h3 mb-3 font-weight-normal">Cadastrar Nova Conta</h1>
+					
+					
+					<h:outputText value="E-mail:" />
+					<h:inputText id="email" type="text" class="form-control" value="#{signUpController.playerEntity.email}"  required="true" autofocus="autofocus" name="email" validatorMessage="TA NULO VIADO"/>
+					<h:message for="email" style="color:red;"></h:message>	
+							
+					<div class="row">
+    					<div class="col-6">
+    						<h:outputText value="Usuário MeusMix:" />
+							<h:inputText id="usernameCadastro" class="form-control" value="#{signUpController.playerEntity.nickName}"  required="true" autofocus="autofocus" name="usernameCadastro"/>						
+						</div>
+						<div class="col-6">
+							<h:outputText value="Senha:" />
+							<h:inputSecret id="passwordCadastro" maxlength="20" value="#{signUpController.playerEntity.password}" class="form-control" placeholder="Password" required="true" name="passwordCadastro"/>
+						</div>
+					</div>
+						<hr />		
+					
+					<div class="row">
+					<div class="col-3">
+					</div>
+						<div class="col-6">
+							<h:commandButton value="Cadastrar" type="submit" class="btn btn-lg btn-primary btn-block" action="#{signUpController.validateFormSigUp}" immediate="false"/>
+						</div>
+						<div class="col-3">
+					</div>
+					</div>
+						
+			</h:form>
+		</p:panel>			
+		</div>
+			
+			</div>	
+
+
+
+			</div>
+		</div>
+
+
+	</main>
+
+	
+
+</h:body>
+</html>

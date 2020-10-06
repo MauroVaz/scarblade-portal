@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head>
+	</h:head>
+	<h:body>
+
+		<footer class="text-muted"
+			style="background: #4B4B4D !important; color: white !important;">
+			<div class="container"
+				style="background: #4B4B4D !important; color: white !important;">
+
+				<h3>Status dos servicos</h3>
+				<h:panelGrid columns="2" border="0" cellpadding="2" cellspacing="2">	
+
+					<h:column>
+						<h:outputText value="Steam Status" />
+					</h:column>
+					<h:column>
+						<a href="https://steamstat.us/" target="_blank">https://steamstat.us/</a>
+					</h:column>
+
+
+				</h:panelGrid>
+				<br />
+				
+				<h3>Formas de pagamentos</h3>
+				<h:panelGrid columns="2" border="0" cellpadding="2" cellspacing="2">
+					<h:column>
+						<h:graphicImage alt="" value="resources/static/billing-images/icons8-mastercard-logo-96.png" width="32"/>
+					</h:column>					
+					<h:column>
+						Mastercard
+					</h:column>
+					<h:column>
+						<h:graphicImage alt="" value="resources/static/billing-images/icons8-visa-96.png" width="32"/>
+					</h:column>
+					<h:column>
+						Visa
+					</h:column>
+					
+				</h:panelGrid>
+				
+				<br />
+				<div style="text-align:center;">
+					meusmix.com @ 2020 - Todos os direitos reservados
+				</div>
+			</div>			
+		</footer>
+
+	</h:body>
+</ui:composition>

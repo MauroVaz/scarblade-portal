@@ -1,0 +1,52 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head>
+	
+		<style>
+			.menu-box{
+				background: transparent;			
+				color: black !important;				
+				font-size: 15px;
+				font-weight: bold;
+			}
+			.menu-box:hover{
+				background: gray;			
+				border-radius: 5px;
+				color: white !important;
+				font-size: 15px;
+				font-weight: bold;
+				box-shadow: 2px 2px 2px orange;
+			}
+		</style>
+	
+	</h:head>
+	<h:body>
+
+
+		
+		
+
+
+		<nav class="navbar navbar-light shadow" style="background-color: white !important; position: fixed; width: 100%;">
+			<div class="container d-flex">
+				<div class="navbar-header">
+					<a href="index.jsf?faces-redirect=true" class="navbar-brand d-flex align-items-center">
+						<span class="navbar-brand mb-0 h1">S C A R B L A D E</span>						 
+					</a>
+				</div>
+
+				<nav class="nav nav-pills nav-fill">
+					<a class="nav-item nav-link menu-box" href="index.jsf?faces-redirect=true">Home</a>
+				  	<a class="nav-item nav-link menu-box" href="myAccount.jsf?faces-redirect=true">Minha Conta</a>
+				  	<a class="nav-item nav-link menu-box" href="signup.jsf?faces-redirect=true">Cadastre-se</a>
+				</nav>
+				
+			</div>			
+		</nav>
+	
+
+
+	</h:body>
+</ui:composition>
