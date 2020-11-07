@@ -21,6 +21,7 @@ import com.unip.tcc.scarblade.dao.UserDAO;
 import com.unip.tcc.scarblade.entity.CarEntity;
 import com.unip.tcc.scarblade.entity.FaceEntity;
 import com.unip.tcc.scarblade.entity.UserEntity;
+import com.unip.tcc.scarblade.resource.Integration;
 import com.unip.tcc.scarblade.utils.ImagemUtils;
 
 @Named
@@ -38,6 +39,7 @@ public class PhotoCamBean implements Serializable {
 	private UserDAO userDao = new UserDAO();
 	private CarDAO carDao = new CarDAO();
 	private FacesDAO faceDao = new FacesDAO();
+	private Integration integ = new Integration();
 	private PhotoDesktopController photo = new PhotoDesktopController();
 
 	public PhotoCamBean() {
@@ -67,10 +69,9 @@ public class PhotoCamBean implements Serializable {
 			String id = userDao.selectUserId(user.getNome());
 			photo.takeImages(id);
 			List<String> a = encoding(id);
-			
-
 			carDao.insertCar(car, id);
 			faceDao.insertFaces(encoding(id), id);
+			integ.executeIntegration(id);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
