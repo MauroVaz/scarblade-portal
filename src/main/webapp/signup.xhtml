@@ -17,65 +17,94 @@
 	<main role="main" style="background: gray;">
 
 		<div class="album py-5 bg-light">
-			<div class="container" style="margin-top: 5%;">				
-    				
-    			    				
-    			<div class="row">
-    			
-    			
-    		
-		<div class="col-12">	
-		<p:panel>
-			<h:form>		
-					<br/>
-					<h:message for="@all" showDetail="true" showSummary="true" />
-					<p:messages showDetail="true"/>
-						
-							
-    				<h1 class="h3 mb-3 font-weight-normal">Cadastrar Nova Conta</h1>
-					
-					
-					<h:outputText value="E-mail:" />
-					<h:inputText id="email" type="text" class="form-control" value="#{signUpController.playerEntity.email}"  required="true" autofocus="autofocus" name="email" validatorMessage="TA NULO VIADO"/>
-					<h:message for="email" style="color:red;"></h:message>	
-							
-					<div class="row">
-    					<div class="col-6">
-    						<h:outputText value="Usuário MeusMix:" />
-							<h:inputText id="usernameCadastro" class="form-control" value="#{signUpController.playerEntity.nickName}"  required="true" autofocus="autofocus" name="usernameCadastro"/>						
+			<div class="container">
+
+
+				<p:panel>
+					<h:form>
+
+						<h1 class="h3 mb-3 font-weight-normal">Cadastrar Nova Conta</h1>
+
+						<hr />
+
+
+						<div class="row">
+							<div class="col-12">
+								<h4 style="text-align: center;">Dados pessoais</h4>
+							</div>
+
+							<div class="col-6">
+								<h:outputText value="Nome" />
+								<h:inputText id="usernameCadastro" class="form-control"
+									value="#{photoCamBean.user.nome}" required="true"
+									autofocus="autofocus" name="Nome" />
+							</div>
+							<div class="col-6">
+								<h:outputText value="Telefone:" />
+								<h:inputText id="passwordCadastro" maxlength="20"
+									value="#{photoCamBean.user.telefone}" class="form-control"
+									placeholder="Password" required="true" name="passwordCadastro" />
+							</div>
 						</div>
-						<div class="col-6">
-							<h:outputText value="Senha:" />
-							<h:inputSecret id="passwordCadastro" maxlength="20" value="#{signUpController.playerEntity.password}" class="form-control" placeholder="Password" required="true" name="passwordCadastro"/>
-						</div>
-					</div>
-						<hr />		
-					
-					<div class="row">
-					<div class="col-3">
-					</div>
-						<div class="col-6">
-							<h:commandButton value="Cadastrar" type="submit" class="btn btn-lg btn-primary btn-block" action="#{signUpController.validateFormSigUp}" immediate="false"/>
-						</div>
-						<div class="col-3">
-					</div>
-					</div>
-						
-			</h:form>
-		</p:panel>			
-		</div>
-			
-			</div>	
 
 
 
+						<hr />
+
+
+						<div class="row">
+							<div class="col-12">
+								<h4 style="text-align: center;">Dados do Veiculo</h4>
+							</div>
+
+							<div class="col-3">
+								<h:outputText value="Marca" />
+								<h:inputText id="marca" class="form-control"
+									value="#{photoCamBean.car.marca}" required="true"
+									autofocus="autofocus" name="Marca" />
+							</div>
+							<div class="col-3">
+								<h:outputText value="Modelo" />
+								<h:inputText id="modelo" maxlength="20"
+									value="#{photoCamBean.car.modelo}" class="form-control"
+									placeholder="Modelo" required="true" name="passwordCadastro" />
+							</div>
+							<div class="col-3">
+								<h:outputText value="Ano" />
+								<h:inputText id="ano" class="form-control"
+									value="#{photoCamBean.car.ano}" required="true"
+									autofocus="autofocus" name="Ano" />
+							</div>
+							<div class="col-3">
+								<h:outputText value="Placa" />
+								<h:inputText id="placa" class="form-control"
+									value="#{photoCamBean.car.placa}" required="true"
+									autofocus="autofocus" name="Placa" />
+							</div>
+						</div>
+
+					
+						<h:commandButton value="Enviar Dados" type="submit" class=""
+							action="#{photoCamBean.persistFormSigUp}" />
+
+					</h:form>
+
+
+
+
+				</p:panel>
 			</div>
 		</div>
 
 
+
+
+
+
+
 	</main>
 
-	
+
 
 </h:body>
 </html>
