@@ -47,7 +47,7 @@ public class PhotoDesktopController {
         OpenCVFrameGrabber camera = new OpenCVFrameGrabber(0);
         camera.start();
         
-        CascadeClassifier detectorFace = new CascadeClassifier("D:\\DEV\\Projetos\\scarblade-treinamento\\src\\recursos\\haarcascade_frontalface_alt.xml");
+        CascadeClassifier detectorFace = new CascadeClassifier("C:\\Projetos\\Recursos\\haarcascade_frontalface_alt.xml");
         
         CanvasFrame cFrame = new CanvasFrame("Preview", CanvasFrame.getDefaultGamma() / camera.getGamma());
         Frame frameCapturado = null;
@@ -78,7 +78,7 @@ public class PhotoDesktopController {
                 if (tecla != null) {
                     if (tecla.getKeyChar() == 'q') {
                         if (amostra <= numeroAmostras) {
-                            imwrite("D:\\DEV\\Projetos\\scarblade-portal\\Imagem\\pessoa." + idPessoa + "." + amostra + ".jpg", faceCapturada);
+                            imwrite("C:\\Projetos\\Imagem\\pessoa." + idPessoa + "." + amostra + ".jpg", faceCapturada);
                             System.out.println("Foto " + amostra + " capturada\n");
                             amostra++;
                         }

@@ -12,7 +12,7 @@ public class Integration {
 	public void executeIntegration(String id) {
 
 		try {
-		  URL url = new URL("http://localhost:8080/scarblade-treinamento/api/v1/treinamento/treinar/"+ id);
+		  URL url = new URL("http://192.168.15.68:8080/scarblade-treinamento/api/v1/treinamento/treinar/"+ id);
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();            
 			connection.addRequestProperty("Request-Method","GET");      
 			    

@@ -49,7 +49,7 @@ public class PhotoCamBean implements Serializable {
 	
 
 	public List<String> encoding(String id) {
-		String path = "D:\\DEV\\Projetos\\scarblade-portal\\Imagem\\";
+		String path = "C:\\Projetos\\Imagem\\";
 		List<String> f = new ArrayList<String>();
 		try {
 			for (int i = 1; i <= 25; i++) {
